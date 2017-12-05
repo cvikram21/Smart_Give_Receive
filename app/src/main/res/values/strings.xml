@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Mydonation</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string-array name="categories">
+
+        <item> -- Materials --</item>
+        <item>Clothes</item>
+        <item> Books</item>
+        <item> Shoes</item>
+        <item> Bags</item>
+        <item>Furniture</item>
+        <item>Kitchen</item>
+        <item> Toys</item>
+        <item> -- Food --</item>
+        <item> Canned Tuna, Chicken or Salmon</item>
+        <item>Peanut Butter</item>
+        <item> Canned Vegetables</item>
+        <item>Canned Fruits in juice</item>
+        <item> Olive or Canola oil</item>
+        <item> Spices</item>
+
+        <item>Canned foods with pop-top lids</item>
+        <item> Low-Sugar Whole Grain Cereals</item>
+        <item>Healthy Snacks</item>
+        <item> Dried Fruits, no sugar added</item>
+        <item> Honey</item>
+        <item> -- General Services --</item>
+        <item>Gardening</item>
+        <item>Painting</item>
+        <item>Carpet Cleaning</item>
+        <item>Pool Cleaning</item>
+        <item>Sprinklers</item>
+        <item> -- Technical Services --</item>
+        <item>Electrical</item>
+        <item>Mechanical</item>
+        <item>Car</item>
+        <item>Computer</item>
+        <item> -- Health Care --</item>
+        <item>First Aid</item>
+    </string-array>
+
+</resources>
