@@ -9,7 +9,7 @@ import android.widget.Button;
 public class donatenow extends AppCompatActivity {
 
 
-    Button btndonatestuff,btncurretreqsts, btnmatchedrequests;
+    Button btndonatestuff,btncurretreqsts, btnmatchedrequests, btnMyDOnations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class donatenow extends AppCompatActivity {
 
         btncurretreqsts=(Button)findViewById(R.id.btncuentreqsts);
 
+        btnMyDOnations = (Button)findViewById(R.id.btndonations);
 
         btndonatestuff.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +48,14 @@ public class donatenow extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(donatenow.this, MatchedRequests.class);
+                startActivity(intent);
+            }
+        });
+
+        btnMyDOnations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(donatenow.this, MyDonations.class);
                 startActivity(intent);
             }
         });
