@@ -153,7 +153,7 @@ public class myrequests extends AppCompatActivity {
             tv2.setText(hm.get("Msg"));
 
             TextView tv3=(TextView) convertView.findViewById(R.id.etgetdate);
-            tv3.setText(hm.get("expdate"));
+            tv3.setText("Expected Date: "+hm.get("expdate"));
 
             TextView tv4=(TextView) convertView.findViewById(R.id.etgetnumber);
             tv4.setText("");

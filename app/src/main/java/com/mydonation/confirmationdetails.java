@@ -117,6 +117,7 @@ public class confirmationdetails extends AppCompatActivity {
 //
 //        } catch (JSONException e) {}
 //    }
+SharedPreferences sharedPreferences;
 
     public void sendDataToserver()
     {
@@ -153,6 +154,9 @@ public class confirmationdetails extends AppCompatActivity {
             protected Map<String, String> getParams() {
 
                 Map<String, String> params = new HashMap<String, String>();
+                sharedPreferences = confirmationdetails.this.getSharedPreferences("donation", Context.MODE_PRIVATE);
+                String value=sharedPreferences.getString("login",null);
+                params.put("uname",value);//
 
                 params.put("reqid",reqid);//
                 params.put("dname",etdonaname.getText().toString());//

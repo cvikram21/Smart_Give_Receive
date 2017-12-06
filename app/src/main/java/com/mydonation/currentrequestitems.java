@@ -170,7 +170,7 @@ public class currentrequestitems extends AppCompatActivity {
             tv3.setText("Expected Date: "+hm.get("expdate"));
 
             TextView tv4=(TextView) convertView.findViewById(R.id.etgetnumber);
-            tv4.setText(hm.get("ReqNumber"));
+            tv4.setText("Requested by: "+hm.get("requestedBy"));
 
 
 //            TextView tv5=(TextView) convertView.findViewById();

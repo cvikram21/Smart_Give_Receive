@@ -1,5 +1,6 @@
 package com.mydonation;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -56,7 +57,7 @@ public class requestitem extends AppCompatActivity {
 
         btnreq=(Button)findViewById(R.id.btnrequestitem);
 
-        etsearchitem=(EditText) findViewById(R.id.etserach);
+        etsearchitem=(EditText) findViewById(R.id.etsearch);
 
         etreqdescp=(EditText) findViewById(R.id.etreqdescp);
 

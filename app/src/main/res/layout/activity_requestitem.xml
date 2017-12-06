@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Request Now"
+            android:text="Request Items"
             android:paddingBottom="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -32,33 +32,19 @@
 
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-
-
-                <EditText
-                    android:id="@+id/etserach"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:background="#d4d4d4"
-                    android:hint="Enter keyword for the item needed"
-                    android:padding="10dp"
-                    android:textColor="#897"
-                    android:textColorHint="#090"
-                    android:textSize="10sp" />
-
-
-
-
-
-        </LinearLayout>
-
-
-
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/etsearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Enter keyword for the item needed" />
+        </android.support.design.widget.TextInputLayout>
 
 
 
@@ -70,7 +56,7 @@
             <EditText android:id="@+id/etreqdescp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 android:hint="Description" />
         </android.support.design.widget.TextInputLayout>
 

@@ -12,7 +12,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
@@ -26,13 +25,11 @@ import java.util.ArrayList;
 
 public class TestDemo extends Activity {
     BarChart chart;
-    PieChart pieChart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test);
         chart = (BarChart) findViewById(R.id.chart);
-        pieChart = (PieChart) findViewById(R.id.pchart);
         getCharts();
     }
     private void parseServerJsonData(String response){//Step -2
@@ -73,7 +70,7 @@ public class TestDemo extends Activity {
         //3. add request to Queue
         queue.add(stringRequest);
     }
-   String[] cnt,item;
+    String[] cnt,item;
     private ArrayList<BarDataSet> getDataSet() {
         ArrayList<BarDataSet> dataSets = null;
 
@@ -93,9 +90,9 @@ public class TestDemo extends Activity {
     private ArrayList<String> getXAxisValues() {
         ArrayList<String> xAxis = new ArrayList<>();
 
-         for(int i=0;i<item.length;i++) {
-             xAxis.add(item[i]);
-         }
+        for(int i=0;i<item.length;i++) {
+            xAxis.add(item[i]);
+        }
 
         return xAxis;
     }

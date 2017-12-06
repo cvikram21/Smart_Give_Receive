@@ -156,7 +156,7 @@ public class myservices extends AppCompatActivity {
             tv3.setText(hm.get("Dat"));
 
             TextView tv4=(TextView) convertView.findViewById(R.id.etgetnumber);
-            tv4.setText(hm.get("Number"));
+            tv4.setText("");
 
             Button bt=(Button) convertView.findViewById(R.id.btngetstatus);
             bt.setText(hm.get("Status"));
