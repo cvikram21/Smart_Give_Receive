@@ -58,7 +58,7 @@ public class MatchedRequests extends AppCompatActivity {
             public void run() {
                 getMatchedRequests();
             }
-        }, 10000);
+        }, 20000);
         //matchRequests();
     }
 
@@ -131,7 +131,7 @@ public class MatchedRequests extends AppCompatActivity {
     private void getServices(){
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://possakrishna.com/Donation/getservices.php";
+        String url = "http://possakrishna.com/Donation/getServicesWithStatus.php";
 
 // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
@@ -213,6 +213,7 @@ public class MatchedRequests extends AppCompatActivity {
                     hm.put("Item", jObj.getString("synonym"));
                     if(jObj.getString("synonym").equalsIgnoreCase(servicesArray.get(ij))){
                         status = "matched";
+                        System.out.println("Matched "+ jObj.get("synonym"));
                         servicesArray.remove(jObj.getString("synonym"));
                     }
                 }
@@ -258,7 +259,8 @@ public class MatchedRequests extends AppCompatActivity {
                     Map<String, String> params = new HashMap<String, String>();
                     params.put("req",item);
                     //}
-                    System.out.println(params.toString());
+                    System.out.println("paramss: "
+                            +params.toString());
                     return params;
                 }
             };
@@ -268,6 +270,7 @@ public class MatchedRequests extends AppCompatActivity {
     }
 
     private void getMatchedRequests(){
+        System.out.println("In getMatchedequests: "+matchedArray.toString());
         for(int i  = 0; i < matchedArray.size(); i++){
             RequestQueue queue = Volley.newRequestQueue(this);
             final String item = matchedArray.get(i);
@@ -307,7 +310,7 @@ public class MatchedRequests extends AppCompatActivity {
 
     private void parseMatchedRequestsJsonData(String response) {//Step -2
         HashMap<String, String> hm;
-        System.out.println("RequestResponse"+response.toString());
+        System.out.println("MatchedRequestResponse"+response.toString());
         requestsArray = new ArrayList<String>();
         try {
             JSONObject json = new JSONObject(response);

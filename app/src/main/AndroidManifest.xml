@@ -38,7 +38,8 @@
         <activity android:name=".inboxdetails" />
         <activity android:name=".Updatedelivery" />
         <activity android:name=".MatchedRequests" />
-        <activity android:name=".MyDonations"></activity>
+        <activity android:name=".MyDonations" />
+        <activity android:name=".approvedDetails"></activity>
     </application>
 
 </manifest>

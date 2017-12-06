@@ -1,6 +1,7 @@
 package com.mydonation;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -95,6 +96,7 @@ public class myrequests extends AppCompatActivity {
             for (int i = 0; i < jArray.length(); i++) {
                 jObj = jArray.getJSONObject(i);
                 hm=new HashMap<String, String>();
+                hm.put("RequestId", jObj.getString("RequestId"));
                 hm.put("Item", jObj.getString("Item"));
                 hm.put("Msg", jObj.getString("Msg"));
                 hm.put("expdate", jObj.getString("expdate"));
@@ -158,8 +160,19 @@ public class myrequests extends AppCompatActivity {
             TextView tv4=(TextView) convertView.findViewById(R.id.etgetnumber);
             tv4.setText("");
 
-            Button bt=(Button) convertView.findViewById(R.id.btngetstatus);
+            final Button bt=(Button) convertView.findViewById(R.id.btngetstatus);
             bt.setText(hm.get("Status"));
+            bt.setTag(hm.get("RequestId").toString());
+            bt.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Toast.makeText(serviceavailable.this,tv5.getTag().toString(),Toast.LENGTH_SHORT).show();
+//
+                    Intent i=new Intent(myrequests.this,approvedDetails.class);
+                    i.putExtra("Id",bt.getTag().toString());
+                    startActivity(i);
+                }
+            });
 
             return convertView;
         }
